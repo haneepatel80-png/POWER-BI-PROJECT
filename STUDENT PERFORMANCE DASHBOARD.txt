@@ -1,0 +1,138 @@
+STUDENT PERFORMANCE DASHBOARD
+POWER BI PROJECT – README
+
+PROJECT OVERVIEW
+This project is an interactive Power BI dashboard created to analyze student academic performance, attendance, and behavior.
+It is developed as part of a practical exam / academic assignment using Power BI Desktop and DAX measures.
+
+The dashboard helps in:
+
+* Tracking student scores
+* Monitoring attendance percentage
+* Analyzing behavior distribution
+* Displaying key KPIs
+
+---
+
+DATA SOURCES USED
+
+1. Students.csv
+
+   * StudentID
+   * Class
+   * Section
+   * Gender
+
+2. Scores.csv
+
+   * StudentID
+   * Subject
+   * Score
+   * MaxScore
+   * Term
+
+3. Attendance.csv
+
+   * StudentID
+   * Date
+   * Status (Present / Absent)
+
+4. Behavior.csv
+
+   * StudentID
+   * BehaviorType
+
+---
+
+DATA MODEL
+
+* StudentID is the primary key
+* One-to-many relationships from Students table to other tables
+* All calculations are done using DAX measures
+
+---
+
+DAX MEASURES USED
+
+Total Students
+DISTINCTCOUNT(Students[StudentID])
+
+Average Score
+AVERAGE(Scores[Score])
+
+Percentage Score
+SUM(Score) / SUM(MaxScore)
+
+Average Attendance %
+(Number of Present records / Total attendance records)
+
+Behavior Count
+COUNT(BehaviorType)
+
+---
+
+VISUALIZATIONS
+
+1. Bar Chart
+
+   * Average Score by Subject and Class
+
+2. Line Chart
+
+   * Performance Trend by Term
+
+3. Donut Chart
+
+   * Behavior Types Distribution
+
+4. Table
+
+   * Student-wise Percentage Score
+   * Conditional Formatting:
+     Green > 80%
+     Red < 40%
+
+5. KPI / Card Visuals
+
+   * Total Students
+   * Average Attendance %
+   * Average Score
+
+---
+
+INTERACTIVITY
+
+* Slicers used for StudentID, Class, Subject, Term
+* KPI values change dynamically based on selected student
+* Cross-filtering enabled between visuals
+
+---
+
+TOOLS USED
+
+* Power BI Desktop
+* DAX (Data Analysis Expressions)
+* CSV Files
+
+---
+
+FILE DETAILS
+
+Power BI File Name: FINAL.pbix
+Documentation File: README.txt
+
+---
+
+CONCLUSION
+
+This Power BI dashboard provides a clear and interactive analysis of student performance.
+It helps in decision-making by showing academic trends, attendance levels, and behavior patterns in a simple visual format.
+
+---
+
+If you want, I can also:
+
+* Make this **shorter for exam submission**
+* Create a **1-page viva explanation**
+* Convert into **PDF format**
+
